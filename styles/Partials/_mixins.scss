@@ -18,11 +18,11 @@
   line-height: 2rem;
   color: $prm-white;
 }
-@mixin section-heading {
+@mixin section-heading($color) {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
-  color: $prm-black;
+  color: $color;
 }
 @mixin sub-section-heading {
   font-size: 0.875rem;
@@ -36,9 +36,10 @@
   line-height: 1.125rem;
   color: $prm-black;
 }
-@mixin footer-text {
+@mixin footer-text($font-weight) {
   font-size: 0.8125rem;
-  font-weight: 400;
+  font-weight: $font-weight;
   line-height: 1.125rem;
   color: $sec-mercury;
 }
+// 400 or 600 for footer section headings

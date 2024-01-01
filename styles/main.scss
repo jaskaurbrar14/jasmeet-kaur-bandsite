@@ -74,7 +74,7 @@ body {
   .Secondary-heading {
     padding-top: 1.5rem;
     padding-bottom: 1rem;
-    @include section-heading;
+    @include section-heading($prm-black);
   }
   .musicians-img {
     height: 12rem;
@@ -108,9 +108,67 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
   &__heading {
-    @include section-heading;
+    @include section-heading($prm-black);
   }
   &__img {
     width: 100%;
+  }
+}
+.footer {
+  background-color: $prm-black;
+  @include page-width;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    &__heading {
+      @include section-heading($prm-white);
+    }
+    .social-media {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+      &__link {
+        .social-icon {
+          text-decoration: none;
+        }
+      }
+    }
+    #band-logo {
+      display: none;
+    }
+  }
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    .contact-section {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      &__name {
+        @include footer-text(600);
+      }
+      &__address {
+        @include footer-text(400);
+      }
+      &__email a {
+        @include footer-text(400);
+        text-decoration: none;
+      }
+    }
+  }
+  #band-logo-1 {
+    width: 7.5rem;
+    padding-top: 4rem;
+  }
+  .copyright {
+    @include footer-text(400);
+    text-transform: capitalize;
+    padding-top: 1rem;
   }
 }

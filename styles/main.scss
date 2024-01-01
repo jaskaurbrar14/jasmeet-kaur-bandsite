@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+@use "Partials/typography" as *;
+* {
+  @include reset;
+}
+.header {
+  display: flex;
+  &__logo {
+    text-decoration: none;
+    &-img {
+      background-color: $prm-black;
+    }
+  }
+  &__navigation {
+    display: flex;
+    list-style: none;
+    &-links {
+      text-decoration: none;
+    }
+  }
+}

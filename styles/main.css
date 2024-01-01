@@ -38,7 +38,6 @@ body {
 .header__logo {
   text-decoration: none;
   display: block;
-  background-color: #323232;
 }
 .header__logo-img {
   width: 7.5rem;
@@ -51,22 +50,103 @@ body {
   list-style: none;
   display: flex;
   flex-direction: row;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 2rem;
 }
 .header__navigation li {
   text-align: center;
   width: 100%;
 }
 .header__navigation-links {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e1e1e1;
   display: block;
   padding: 1rem;
   text-decoration: none;
-  color: #e1e1e1;
 }
 .header__navigation-links:active, .header__navigation-links:hover {
   color: #fff;
   font-weight: 700;
   border-bottom: #fff solid 5px;
+}
+.hero-section {
+  background: linear-gradient(0deg, rgba(50, 50, 50, 0.5019607843), rgba(50, 50, 50, 0.5019607843)), url(../Assets/Images/hero-bio.jpg);
+  width: 100%;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+}
+.hero-section__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.musicians-bio {
+  padding: 1rem;
+  padding: 1rem;
+}
+.musicians-bio .Secondary-heading {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #323232;
+}
+.musicians-bio .musicians-img {
+  height: 12rem;
+  width: 100%;
+}
+.musicians-bio .musicians-quote {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #323232;
+  padding-top: 1rem;
+}
+.musicians-bio .band-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.musicians-bio .band-bio .band-heading {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #323232;
+  text-transform: capitalize;
+}
+.musicians-bio .band-bio .band-text {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  color: #323232;
+}
+
+.gallery {
+  background-color: #fafafa;
+  padding: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+.gallery__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #323232;
+}
+.gallery__img {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

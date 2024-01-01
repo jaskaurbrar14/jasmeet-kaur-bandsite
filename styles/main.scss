@@ -1,8 +1,11 @@
-@import "variables";
-@import "mixins";
 @use "Partials/typography" as *;
+@import "Partials/variables";
+@import "Partials/mixins";
 * {
   @include reset;
+}
+body {
+  font: "Avenir Next", Sans-serif;
 }
 .header {
   display: flex;

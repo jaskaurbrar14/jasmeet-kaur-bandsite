@@ -27,47 +27,76 @@ body {
 }
 
 .header {
+  background-color: #323232;
+}
+.header__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #323232;
   width: 100%;
   padding-top: 1rem;
   flex: 1 1 auto;
 }
-.header__logo {
+@media screen and (min-width: 48rem) {
+  .header__wrapper {
+    margin: 0 2.25rem;
+    flex-direction: row;
+    gap: 4.25rem;
+    justify-content: flex-start;
+    padding-top: 0;
+  }
+}
+.header__wrapper .header__logo {
   text-decoration: none;
   display: block;
   line-height: 0;
 }
-.header__logo-img {
+.header__wrapper .header__logo-img {
   width: 7.5rem;
   height: 1.25rem;
 }
-.header .navigation {
+.header__wrapper .navigation {
   width: 100%;
 }
-.header__navigation {
+.header__wrapper .header__navigation {
   list-style: none;
   display: flex;
   flex-direction: row;
 }
-.header__navigation li {
+@media screen and (min-width: 48rem) {
+  .header__wrapper .header__navigation {
+    gap: 4rem;
+  }
+}
+.header__wrapper .header__navigation li {
   text-align: center;
   width: 100%;
 }
-.header__navigation-links {
+@media screen and (min-width: 48rem) {
+  .header__wrapper .header__navigation li {
+    flex-basis: auto;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.header__wrapper .header__navigation-links {
   font-size: 1rem;
   font-weight: 400;
   color: #e1e1e1;
   display: block;
-  padding: 1rem;
+  padding: 1rem 0;
   text-decoration: none;
 }
-.header__navigation-links:active, .header__navigation-links:hover {
+@media screen and (min-width: 48rem) {
+  .header__wrapper .header__navigation-links {
+    padding: 2.25rem 0;
+  }
+}
+.header__wrapper .header__navigation-links:active, .header__wrapper .header__navigation-links:hover {
+  font-size: 1rem;
+  font-weight: 600;
   color: #fff;
-  font-weight: 700;
-  border-bottom: #fff solid 5px;
+  border-bottom: #fff solid 4px;
 }
 .hero-section {
   background: linear-gradient(0deg, rgba(50, 50, 50, 0.5019607843), rgba(50, 50, 50, 0.5019607843)), url(../Assets/Images/hero-bio.jpg);
@@ -76,6 +105,11 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+}
+@media screen and (min-width: 48rem) {
+  .hero-section {
+    height: 40rem;
+  }
 }
 .hero-section__heading {
   font-size: 1.5rem;
@@ -88,9 +122,23 @@ body {
   left: 1rem;
   transform: translateY(-50%);
 }
+@media screen and (min-width: 48rem) {
+  .hero-section__heading {
+    left: 2.25rem;
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    color: #fff;
+  }
+}
 
 .musicians-bio {
   margin: 0 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .musicians-bio {
+    margin: 0 2.25rem;
+  }
 }
 .musicians-bio .Secondary-heading {
   padding-top: 1.5rem;
@@ -100,9 +148,24 @@ body {
   line-height: 2rem;
   color: #323232;
 }
+@media screen and (min-width: 48rem) {
+  .musicians-bio .Secondary-heading {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    color: #323232;
+  }
+}
 .musicians-bio .musicians-img {
   height: 12rem;
   width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .musicians-bio .musicians-img {
+    height: 30rem;
+  }
 }
 .musicians-bio .musicians-quote {
   font-size: 0.875rem;
@@ -111,12 +174,45 @@ body {
   color: #323232;
   padding-top: 1rem;
 }
+@media screen and (min-width: 48rem) {
+  .musicians-bio .musicians-quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #323232;
+    padding-top: 2.25rem;
+  }
+}
+.musicians-bio .musicians-quote .musician-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+  color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .musicians-bio .musicians-quote .musician-name {
+    padding-top: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.375rem;
+    color: #323232;
+  }
+}
 .musicians-bio .band-bio {
   display: flex;
   flex-direction: column;
   gap: 16px;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .musicians-bio .band-bio {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    gap: 2.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .musicians-bio .band-bio .band-heading {
   font-size: 0.875rem;
@@ -125,11 +221,29 @@ body {
   color: #323232;
   text-transform: capitalize;
 }
+@media screen and (min-width: 48rem) {
+  .musicians-bio .band-bio .band-heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2rem;
+    color: #323232;
+    flex: 0 0 100%;
+  }
+}
 .musicians-bio .band-bio .band-text {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
   color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .musicians-bio .band-bio .band-text {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: #323232;
+    flex: 1;
+  }
 }
 
 .gallery {
@@ -143,14 +257,31 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.gallery__wrapper__heading {
+@media screen and (min-width: 48rem) {
+  .gallery__wrapper {
+    margin: 0 2.25rem;
+    gap: 2.25rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.gallery__wrapper .gallery__heading {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
   color: #323232;
+  flex: 0 0 100%;
 }
-.gallery__wrapper__img {
+.gallery__wrapper .gallery__img {
   width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .gallery__wrapper .gallery__img {
+    flex: 1;
+    width: 30%;
+  }
 }
 
 .footer {
@@ -162,6 +293,13 @@ body {
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .footer__wrapper {
+    margin: 0 2.25rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
 }
 .footer__wrapper .contact {
   display: flex;
@@ -185,15 +323,27 @@ body {
 .footer__wrapper .contact #band-logo {
   display: none;
 }
+@media screen and (min-width: 48rem) {
+  .footer__wrapper .contact #band-logo {
+    display: block;
+    width: 7.5rem;
+  }
+}
 .footer__wrapper .contact-wrapper {
   display: flex;
   flex-direction: column;
 }
 .footer__wrapper .contact-wrapper .contact-section {
-  padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
   gap: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .footer__wrapper .contact-wrapper .contact-section {
+    padding-top: 3rem;
+    gap: 2.25rem;
+  }
 }
 .footer__wrapper .contact-wrapper .contact-section__name {
   font-size: 0.8125rem;
@@ -218,6 +368,11 @@ body {
   width: 7.5rem;
   padding-top: 4rem;
 }
+@media screen and (min-width: 48rem) {
+  .footer__wrapper #band-logo-1 {
+    display: none;
+  }
+}
 .footer__wrapper .copyright {
   font-size: 0.8125rem;
   font-weight: 400;
@@ -225,4 +380,9 @@ body {
   color: #e1e1e1;
   text-transform: capitalize;
   padding-top: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .footer__wrapper .copyright {
+    padding-top: 2.25rem;
+  }
 }/*# sourceMappingURL=main.css.map */

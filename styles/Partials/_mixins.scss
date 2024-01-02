@@ -14,13 +14,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-@mixin page-width {
-  margin: 0 1rem;
+@mixin page-width($margin) {
+  margin: $margin;
 }
-@mixin header($font-size, $font-weight) {
+@mixin header($font-size, $font-weight, $color) {
   font-size: $font-size;
   font-weight: $font-weight;
-  color: $sec-mercury;
+  color: $color;
 }
 @mixin page-heading($font-size, $font-weight, $line-height) {
   font-size: $font-size;

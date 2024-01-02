@@ -38,6 +38,7 @@ body {
 .header__logo {
   text-decoration: none;
   display: block;
+  line-height: 0;
 }
 .header__logo-img {
   width: 7.5rem;
@@ -74,6 +75,7 @@ body {
   height: 15rem;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 .hero-section__heading {
   font-size: 1.5rem;
@@ -88,8 +90,7 @@ body {
 }
 
 .musicians-bio {
-  padding: 1rem;
-  padding: 1rem;
+  margin: 0 1rem;
 }
 .musicians-bio .Secondary-heading {
   padding-top: 1.5rem;
@@ -133,89 +134,91 @@ body {
 
 .gallery {
   background-color: #fafafa;
-  padding: 1rem;
-  padding: 1rem;
+}
+.gallery__wrapper {
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.gallery__heading {
+.gallery__wrapper__heading {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
   color: #323232;
 }
-.gallery__img {
+.gallery__wrapper__img {
   width: 100%;
 }
 
 .footer {
   background-color: #323232;
-  padding: 1rem;
-  padding: 1rem;
+}
+.footer__wrapper {
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
 }
-.footer .contact {
+.footer__wrapper .contact {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.footer .contact__heading {
+.footer__wrapper .contact__heading {
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 2rem;
   color: #fff;
 }
-.footer .contact .social-media {
+.footer__wrapper .contact .social-media {
   display: flex;
   list-style: none;
   gap: 2rem;
 }
-.footer .contact .social-media__link .social-icon {
+.footer__wrapper .contact .social-media__link .social-icon {
   text-decoration: none;
 }
-.footer .contact #band-logo {
+.footer__wrapper .contact #band-logo {
   display: none;
 }
-.footer .contact-wrapper {
+.footer__wrapper .contact-wrapper {
   display: flex;
   flex-direction: column;
 }
-.footer .contact-wrapper .contact-section {
+.footer__wrapper .contact-wrapper .contact-section {
   padding-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.footer .contact-wrapper .contact-section__name {
+.footer__wrapper .contact-wrapper .contact-section__name {
   font-size: 0.8125rem;
   font-weight: 600;
   line-height: 1.125rem;
-  color: #e1e1e1;
+  color: #fff;
 }
-.footer .contact-wrapper .contact-section__address {
+.footer__wrapper .contact-wrapper .contact-section__address {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
   color: #e1e1e1;
 }
-.footer .contact-wrapper .contact-section__email a {
+.footer__wrapper .contact-wrapper .contact-section__email a {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;
   color: #e1e1e1;
   text-decoration: none;
 }
-.footer #band-logo-1 {
+.footer__wrapper #band-logo-1 {
   width: 7.5rem;
   padding-top: 4rem;
 }
-.footer .copyright {
+.footer__wrapper .copyright {
   font-size: 0.8125rem;
   font-weight: 400;
   line-height: 1.125rem;

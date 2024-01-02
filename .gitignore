@@ -1,5 +1,6 @@
-Ds_store
+.DS_Store
 *.css.map
 .sass-cache/
 *.sass.map
 *.scss.map
+README.md

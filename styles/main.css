@@ -377,11 +377,11 @@ body {
 .footer__wrapper .contact .social-media__link .social-icon {
   text-decoration: none;
 }
-.footer__wrapper .contact #band-logo {
+.footer__wrapper .contact .contact__link .band-logo {
   display: none;
 }
 @media screen and (min-width: 48rem) {
-  .footer__wrapper .contact #band-logo {
+  .footer__wrapper .contact .contact__link .band-logo {
     display: block;
     width: 7.5rem;
     margin-left: auto;
@@ -455,12 +455,12 @@ body {
     color: #e1e1e1;
   }
 }
-.footer__wrapper #band-logo-1 {
+.footer__wrapper .band-logo-1 {
   width: 7.5rem;
   padding-top: 4rem;
 }
 @media screen and (min-width: 48rem) {
-  .footer__wrapper #band-logo-1 {
+  .footer__wrapper .band-logo-1 {
     display: none;
   }
 }

@@ -2,12 +2,7 @@
 @use "Partials/variables" as *;
 @use "Partials/mixins" as *;
 @use "Partials/global" as *;
-* {
-  @include reset;
-}
-body {
-  font-family: "Avenir Next", Sans-serif;
-}
+
 // Hero-Section
 .hero-section {
   background: linear-gradient(0deg, #32323280, #32323280),

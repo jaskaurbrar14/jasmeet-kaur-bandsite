@@ -1,3 +1,10 @@
+// Global resets Section
+* {
+  @include reset;
+}
+body {
+  font-family: "Avenir Next Lt Pro", Sans-serif;
+}
 // Header Section
 .header {
   background-color: $prm-black;
@@ -112,12 +119,16 @@
           }
         }
       }
-      #band-logo {
+      &__link {
+        text-decoration: none;
+        line-height: 0;
         display: none;
         @include tablet {
           display: block;
-          width: 7.5rem;
           margin-left: auto;
+        }
+        .band-logo {
+          width: 7.5rem;
         }
       }
     }
@@ -161,11 +172,16 @@
         }
       }
     }
-    #band-logo-1 {
-      width: 7.5rem;
+    .footer__link {
+      text-decoration: none;
+      line-height: 0;
+      display: block;
       padding-top: 4rem;
       @include tablet {
         display: none;
+      }
+      .band-logo-1 {
+        width: 7.5rem;
       }
     }
     .copyright {

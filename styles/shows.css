@@ -281,4 +281,51 @@ body {
     line-height: 1.25rem;
     color: #e1e1e1;
   }
+}
+
+.hero-section {
+  background: linear-gradient(0deg, rgba(50, 50, 50, 0.5019607843), rgba(50, 50, 50, 0.5019607843)), url(../Assets/Images/hero-shows.jpg);
+  width: 100%;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (min-width: 48rem) {
+  .hero-section {
+    height: 40rem;
+  }
+}
+.hero-section__wrapper {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+  margin: 0 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .hero-section__wrapper {
+    margin: 0 2.25rem;
+    height: 40rem;
+    width: 48rem;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .hero-section__wrapper {
+    margin: 0 auto;
+    width: 80rem;
+  }
+}
+.hero-section__wrapper .hero-section__song {
+  width: 100%;
+  height: 5rem;
+}
+.hero-section__wrapper .hero-section__song-details {
+  font-size: 10px;
+  color: #cccccc;
+  line-break: anywhere;
+  font-family: "Avenir Next Lt Pro", Sans-serif;
+  word-break: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 100;
 }/*# sourceMappingURL=shows.css.map */

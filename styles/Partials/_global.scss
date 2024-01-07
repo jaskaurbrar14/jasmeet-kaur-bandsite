@@ -40,41 +40,45 @@ body {
     }
     .navigation {
       width: 100%;
-    }
-    .header__navigation {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      @include tablet {
-        gap: 4rem;
-      }
-      li {
-        text-align: center;
-        width: 100%;
+      &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
         @include tablet {
-          flex-basis: auto;
-          width: fit-content;
+          gap: 4rem;
         }
-      }
-      &-links {
-        @include header(1rem, 400, $sec-mercury);
-        display: block;
-        padding: 1rem 0;
-        text-decoration: none;
-        @include tablet {
-          padding: 2.25rem 0;
-        }
-        &:active {
-          @include header(1rem, 600, $prm-white);
-          border-bottom: $prm-white solid 4px;
-        }
-        &:hover {
-          @extend :active;
+        li {
+          text-align: center;
+          width: 100%;
+          @include tablet {
+            flex-basis: auto;
+            width: fit-content;
+          }
+          .navigation__list-links {
+            @include header(1rem, 400, $sec-mercury);
+            display: block;
+            padding: 1rem 0;
+            text-decoration: none;
+            @include tablet {
+              padding: 2.25rem 0;
+            }
+            &:active {
+              @include header(1rem, 600, $prm-white);
+              border-bottom: $prm-white solid 4px;
+            }
+            &:hover {
+              @extend :active;
+            }
+            &--active {
+              border-bottom: $prm-white solid 4px;
+            }
+          }
         }
       }
     }
   }
 }
+
 // Footer Section
 .footer {
   background-color: $prm-black;
@@ -111,12 +115,12 @@ body {
           @include section-heading(2.25rem, 700, 2.75rem, $prm-white);
         }
       }
-      .social-media {
+      &__social {
         display: flex;
         list-style: none;
         gap: 2rem;
         align-items: center;
-        &__link {
+        &-link {
           .social-icon {
             text-decoration: none;
           }

@@ -133,7 +133,7 @@
     </section>
     <section class="comment-section">
       <h2 class="comment-section__heading">Join the Conversation</h2>
-      <form action="" class="comment-section__form">
+      <form class="comment-section__form">
         <section class="comment-section__form-sec">
           <label class="comment-section__form-sec-label" for="name-input"
             >Name</label
@@ -151,19 +151,40 @@
           <label class="comment-section__form-sec-label" for="comment-input"
             >comment</label
           >
-          <input
+          <textarea
             class="comment-section__form-sec-input-big"
             id="comment-input"
             type="text"
             name="comment"
             placeholder="Add a new comment"
+            minlength="1"
+            maxlength="200"
+            rows="3"
+            cols="32"
             required
-          />
+          >
+          </textarea>
         </section>
         <button type="submit">comment</button>
       </form>
       <hr />
-      <section class="comments"></section>
+      <section class="comments">
+        <article class="comment-details">
+          <image
+            class="comment-details--image"
+            src="./Assets/Images/Mohan-muruge.jpg"
+            alt="Image placeholder for users photo"
+          ></image>
+          <section class="comment-details--sec">
+            <p class="comment-details--sec-name">FirstName, LastName</p>
+            <p class="comment-details--sec-date">Date.</p>
+            <p class="comment-details--sec-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+              ratione.
+            </p>
+          </section>
+        </article>
+      </section>
     </section>
     <footer class="footer">
       <section class="footer__wrapper">
@@ -266,5 +287,6 @@
         </p>
       </section>
     </footer>
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>

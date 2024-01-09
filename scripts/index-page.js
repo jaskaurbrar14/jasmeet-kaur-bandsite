@@ -59,7 +59,6 @@ function CreateComment() {
 CreateComment();
 
 const Form = document.querySelector(".comment-section__form");
-
 Form.addEventListener("submit", (event) => {
   event.preventDefault();
   const newName = event.target.name;

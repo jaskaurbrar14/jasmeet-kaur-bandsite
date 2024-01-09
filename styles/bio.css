@@ -704,12 +704,12 @@ body {
   line-height: 1.375rem;
   color: #323232;
 }
-.comment-section .comments__divider {
+.comment-section__divider {
   stroke-width: 1px;
   color: #e1e1e1;
 }
 @media screen and (min-width: 48rem) {
-  .comment-section .comments__divider {
+  .comment-section__divider {
     width: auto;
   }
 }/*# sourceMappingURL=bio.css.map */

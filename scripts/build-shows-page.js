@@ -30,6 +30,7 @@ const Shows = [
     location: "San Francisco, CA",
   },
 ];
+
 function CreateShow(i) {
   const showCont = document.querySelector(".show-wrapper");
   const showEl = document.createElement("article");
@@ -58,7 +59,7 @@ function CreateShow(i) {
     "en-US",
     dateFormat
   );
-  // venue
+
   const showVenue = document.createElement("section");
   showVenue.classList.add("show-details__venue");
   showEl.appendChild(showVenue);
@@ -73,7 +74,6 @@ function CreateShow(i) {
   showVenue.appendChild(showVenueInput);
   showVenueInput.innerText = Shows[i].venue;
 
-  // location
   const showLocation = document.createElement("section");
   showLocation.classList.add("show-details__location");
   showEl.appendChild(showLocation);
@@ -97,6 +97,7 @@ function CreateShow(i) {
   Divider.classList.add("show__divider");
   showCont.appendChild(Divider);
 }
+
 for (let i = 0; i < Shows.length; i++) {
   CreateShow(i);
 }

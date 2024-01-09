@@ -14,6 +14,7 @@
   @include tablet {
     height: 40rem;
   }
+
   &__wrapper {
     @include page-width(0 1rem 0 1rem);
     display: flex;
@@ -34,6 +35,7 @@
       width: 80rem;
       align-items: stretch;
     }
+
     .hero-section__sub-heading {
       @include sub-section-heading(0.875rem, 600, 1.375rem);
       color: $prm-white;
@@ -44,6 +46,7 @@
         }
       }
     }
+
     .hero-section__heading {
       @include page-heading(1.5rem, 700, 2rem);
       @include tablet {
@@ -53,6 +56,7 @@
         }
       }
     }
+
     .hero-section__song-details {
       font-size: 10px;
       color: #cccccc;
@@ -79,6 +83,7 @@
     }
   }
 }
+
 .show {
   display: flex;
   flex-direction: column;
@@ -113,6 +118,7 @@
       }
     }
   }
+
   .show-wrapper {
     display: flex;
     flex-direction: column;
@@ -124,6 +130,7 @@
       width: 80%;
       gap: 0rem;
     }
+
     .show-label {
       display: none;
       color: $prm-silver;
@@ -142,6 +149,7 @@
       @include desktop {
         width: 60rem;
       }
+
       &-tag {
         color: $prm-silver;
         flex-basis: 0;
@@ -149,6 +157,7 @@
       }
     }
   }
+
   .show__divider {
     stroke-width: 1px;
     color: $sec-mercury;
@@ -156,6 +165,7 @@
       width: auto;
     }
   }
+
   .show-details {
     display: flex;
     flex-direction: column;
@@ -176,9 +186,11 @@
     &:hover {
       background-color: $sec-alabaster;
     }
+
     &--highlight {
       background-color: $sec-mercury;
     }
+
     &__date {
       @include tablet {
         flex: 1;
@@ -186,6 +198,7 @@
           max-width: 22%;
         }
       }
+
       &-label {
         color: $prm-silver;
         text-transform: uppercase;
@@ -194,11 +207,13 @@
           display: none;
         }
       }
+
       &-input {
         @include sub-section-heading(0.875rem, 600, 1.375rem);
         color: $prm-black;
       }
     }
+
     &__venue {
       @include tablet {
         flex: 1;
@@ -206,20 +221,22 @@
           max-width: 22%;
         }
       }
+
       &-label {
         color: $prm-silver;
         text-transform: uppercase;
         @include body-text(0.8125rem, 400, 1.375rem);
-
         @include tablet {
           display: none;
         }
       }
+
       &-input {
         @include sub-section-heading(0.875rem, 400, 1.375rem);
         color: $prm-black;
       }
     }
+
     &__location {
       @include tablet {
         flex: 1;
@@ -227,20 +244,22 @@
           max-width: 22%;
         }
       }
+
       &-label {
         color: $prm-silver;
         text-transform: uppercase;
         @include body-text(0.8125rem, 400, 1.375rem);
-
         @include tablet {
           display: none;
         }
       }
+
       &-input {
         @include sub-section-heading(0.875rem, 400, 1.375rem);
         color: $prm-black;
       }
     }
+
     &__button {
       height: 2.5rem;
       width: 100%;
@@ -249,7 +268,6 @@
       border-radius: 4px;
       text-transform: uppercase;
       @include cta-text(0.875rem, 600, 1.375rem);
-
       &:hover {
         background-color: $sec-black;
         color: $prm-white;

@@ -1,0 +1,281 @@
+@use "Partials/typography" as *;
+@use "Partials/variables" as *;
+@use "Partials/mixins" as *;
+@use "Partials/global" as *;
+// Hero-section
+.hero-section {
+  background: linear-gradient(0deg, #32323280, #32323280),
+    url(../Assets/Images/hero-shows.jpg);
+  width: 100%;
+  height: 15rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  @include tablet {
+    height: 40rem;
+  }
+
+  &__wrapper {
+    @include page-width(0 1rem 0 1rem);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    @include tablet {
+      @include page-width(0 2.25rem);
+      gap: 2.25rem;
+      width: 70%;
+    }
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include page-width(0 auto);
+      width: 80rem;
+      align-items: stretch;
+    }
+
+    .hero-section__sub-heading {
+      @include sub-section-heading(0.875rem, 600, 1.375rem);
+      color: $prm-white;
+      @include tablet {
+        @include sub-section-heading(1.5rem, 600, 2rem);
+        @include desktop {
+          flex: 0 0 100%;
+        }
+      }
+    }
+
+    .hero-section__heading {
+      @include page-heading(1.5rem, 700, 2rem);
+      @include tablet {
+        @include page-heading(3.75rem, 700, 4.25rem);
+        @include desktop {
+          flex: 1;
+        }
+      }
+    }
+
+    .hero-section__song-details {
+      font-size: 10px;
+      color: #cccccc;
+      line-break: anywhere;
+      font-family: "Avenir Next Lt Pro", Sans-serif;
+      word-break: normal;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 100;
+      height: 4rem;
+      @include tablet {
+        height: 7rem;
+        padding-top: 1.5rem;
+        width: 70%;
+      }
+      @include desktop {
+        padding-top: 0;
+        height: 5rem;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: column;
+    padding-bottom: 2.25rem;
+    @include page-width(0 2.25rem);
+  }
+  @include desktop {
+    flex-direction: row;
+    padding-bottom: 2.25rem;
+    padding-top: 3rem;
+    @include page-width(0 auto);
+    width: 80rem;
+  }
+
+  .show-heading {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    @include page-width(0 1rem);
+    @include section-heading(1.5rem, 700, 2rem, $prm-black);
+    @include tablet {
+      padding-top: 3rem;
+      padding-bottom: 2.25rem;
+      margin: 0;
+      @include section-heading(2.25rem, 700, 2.75rem, $prm-black);
+      @include desktop {
+        padding: 0;
+        gap: 3rem;
+        margin: 0;
+        width: 80rem;
+      }
+    }
+  }
+
+  .show-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include tablet {
+      gap: 0rem;
+    }
+    @include desktop {
+      width: 80%;
+      gap: 0rem;
+    }
+
+    .show-label {
+      display: none;
+      color: $prm-silver;
+      text-transform: uppercase;
+      @include tablet {
+        @include body-text(0.875rem, 400, 1.375rem);
+        display: flex;
+        gap: 0;
+        flex-direction: row;
+        width: 100%;
+        align-items: baseline;
+        justify-content: space-between;
+        margin: 0;
+        padding: 1rem;
+      }
+      @include desktop {
+        width: 60rem;
+      }
+
+      &-tag {
+        color: $prm-silver;
+        flex-basis: 0;
+        max-width: 22%;
+      }
+    }
+  }
+
+  .show__divider {
+    stroke-width: 1px;
+    color: $sec-mercury;
+    @include tablet {
+      width: auto;
+    }
+  }
+
+  .show-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @include page-width(0 1rem);
+    @include tablet {
+      gap: 0;
+      flex-direction: row;
+      width: 100%;
+      align-items: baseline;
+      justify-content: space-between;
+      margin: 0;
+      padding: 1rem;
+    }
+    @include desktop {
+      width: 60rem;
+    }
+    &:hover {
+      background-color: $sec-alabaster;
+    }
+
+    &--highlight {
+      background-color: $sec-mercury;
+    }
+
+    &__date {
+      @include tablet {
+        flex: 1;
+        @include desktop {
+          max-width: 22%;
+        }
+      }
+
+      &-label {
+        color: $prm-silver;
+        text-transform: uppercase;
+        @include body-text(0.8125rem, 400, 1.375rem);
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &-input {
+        @include sub-section-heading(0.875rem, 600, 1.375rem);
+        color: $prm-black;
+      }
+    }
+
+    &__venue {
+      @include tablet {
+        flex: 1;
+        @include desktop {
+          max-width: 22%;
+        }
+      }
+
+      &-label {
+        color: $prm-silver;
+        text-transform: uppercase;
+        @include body-text(0.8125rem, 400, 1.375rem);
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &-input {
+        @include sub-section-heading(0.875rem, 400, 1.375rem);
+        color: $prm-black;
+      }
+    }
+
+    &__location {
+      @include tablet {
+        flex: 1;
+        @include desktop {
+          max-width: 22%;
+        }
+      }
+
+      &-label {
+        color: $prm-silver;
+        text-transform: uppercase;
+        @include body-text(0.8125rem, 400, 1.375rem);
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &-input {
+        @include sub-section-heading(0.875rem, 400, 1.375rem);
+        color: $prm-black;
+      }
+    }
+
+    &__button {
+      height: 2.5rem;
+      width: 100%;
+      background-color: $prm-black;
+      color: $prm-white;
+      border-radius: 4px;
+      text-transform: uppercase;
+      @include cta-text(0.875rem, 600, 1.375rem);
+      &:hover {
+        background-color: $sec-black;
+        color: $prm-white;
+      }
+      @include tablet {
+        padding: 0 2rem;
+        width: auto;
+      }
+    }
+  }
+}

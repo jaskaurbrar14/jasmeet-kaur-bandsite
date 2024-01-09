@@ -1,6 +1,18 @@
+// Global resets Section
+@use "typography" as *;
+@use "variables" as *;
+@use "mixins" as *;
+// resets
+* {
+  @include reset;
+}
+body {
+  font-family: "Avenir Next Lt Pro", Sans-serif;
+}
 // Header Section
 .header {
   background-color: $prm-black;
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -19,47 +31,56 @@
       @include page-width(0 auto);
       width: 80rem;
     }
+
     .header__logo {
       text-decoration: none;
       display: block;
       line-height: 0;
+
       &-img {
         width: 7.5rem;
         height: 1.25rem;
       }
     }
+
     .navigation {
       width: 100%;
-    }
-    .header__navigation {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      @include tablet {
-        gap: 4rem;
-      }
-      li {
-        text-align: center;
-        width: 100%;
+
+      &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
         @include tablet {
-          flex-basis: auto;
-          width: fit-content;
+          gap: 4rem;
         }
-      }
-      &-links {
-        @include header(1rem, 400, $sec-mercury);
-        display: block;
-        padding: 1rem 0;
-        text-decoration: none;
-        @include tablet {
-          padding: 2.25rem 0;
-        }
-        &:active {
-          @include header(1rem, 600, $prm-white);
-          border-bottom: $prm-white solid 4px;
-        }
-        &:hover {
-          @extend :active;
+
+        li {
+          text-align: center;
+          width: 100%;
+          @include tablet {
+            flex-basis: auto;
+            width: fit-content;
+          }
+
+          .navigation__list-links {
+            @include header(1rem, 400, $sec-mercury);
+            display: block;
+            padding: 1rem 0;
+            text-decoration: none;
+            @include tablet {
+              padding: 2.25rem 0;
+            }
+            &:active {
+              @include header(1rem, 600, $prm-white);
+              border-bottom: $prm-white solid 4px;
+            }
+            &:hover {
+              @extend :active;
+            }
+            &--active {
+              border-bottom: $prm-white solid 4px;
+            }
+          }
         }
       }
     }
@@ -68,6 +89,7 @@
 // Footer Section
 .footer {
   background-color: $prm-black;
+
   &__wrapper {
     @include page-width(0 1rem);
     display: flex;
@@ -85,6 +107,7 @@
       @include page-width(0 auto);
       width: 80rem;
     }
+
     .contact {
       display: flex;
       flex-direction: column;
@@ -95,29 +118,35 @@
         flex: 0 0 100%;
         gap: 2.25rem;
       }
+
       &__heading {
         @include section-heading(1.5rem, 700, 2rem, $prm-white);
         @include tablet {
           @include section-heading(2.25rem, 700, 2.75rem, $prm-white);
         }
       }
-      .social-media {
+
+      &__social {
         display: flex;
         list-style: none;
         gap: 2rem;
         align-items: center;
-        &__link {
-          .social-icon {
-            text-decoration: none;
-          }
+
+        &-link .social-icon {
+          text-decoration: none;
         }
       }
-      #band-logo {
+
+      &__link {
+        text-decoration: none;
+        line-height: 0;
         display: none;
         @include tablet {
           display: block;
-          width: 7.5rem;
           margin-left: auto;
+        }
+        .band-logo {
+          width: 7.5rem;
         }
       }
     }
@@ -129,6 +158,7 @@
         flex-direction: row;
         gap: 2.25rem;
       }
+
       .contact-section {
         display: flex;
         flex-direction: column;
@@ -140,18 +170,21 @@
           gap: 2.25rem;
           flex-grow: 1;
         }
+
         &__name {
           @include footer-text(0.8125rem, 600, 1.125rem, $prm-white);
           @include tablet {
             @include footer-text(0.875rem, 600, 1.25rem, $prm-white);
           }
         }
+
         &__address {
           @include footer-text(0.8125rem, 400, 1.125rem, $sec-mercury);
           @include tablet {
             @include footer-text(0.875rem, 400, 1.25rem, $sec-mercury);
           }
         }
+
         &__email a {
           @include footer-text(0.8125rem, 400, 1.125rem, $sec-mercury);
           text-decoration: none;
@@ -161,13 +194,21 @@
         }
       }
     }
-    #band-logo-1 {
-      width: 7.5rem;
+
+    .footer__link {
+      text-decoration: none;
+      line-height: 0;
+      display: block;
       padding-top: 4rem;
       @include tablet {
         display: none;
       }
+
+      .band-logo-1 {
+        width: 7.5rem;
+      }
     }
+
     .copyright {
       @include footer-text(0.8125rem, 400, 1.125rem, $sec-mercury);
       text-transform: capitalize;

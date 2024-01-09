@@ -1,54 +1,68 @@
 @use "variables" as *;
+
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;
   }
 }
+
 @mixin desktop {
   @media screen and (min-width: $desktop-breakpoint) {
     @content;
   }
 }
+
 @mixin reset {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 @mixin page-width($margin) {
   margin: $margin;
 }
+
 @mixin header($font-size, $font-weight, $color) {
   font-size: $font-size;
   font-weight: $font-weight;
   color: $color;
 }
+
 @mixin page-heading($font-size, $font-weight, $line-height) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   color: $prm-white;
 }
+
 @mixin section-heading($font-size, $font-weight, $line-height, $color) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   color: $color;
 }
+
 @mixin sub-section-heading($font-size, $font-weight, $line-height) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-  color: $prm-black;
 }
+
 @mixin body-text($font-size, $font-weight, $line-height) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
-  color: $prm-black;
 }
+
 @mixin footer-text($font-size, $font-weight, $line-height, $color) {
   font-size: $font-size;
   font-weight: $font-weight;
   line-height: $line-height;
   color: $color;
+}
+
+@mixin cta-text($font-size, $font-weight, $line-height) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
 }

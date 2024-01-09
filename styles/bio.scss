@@ -19,7 +19,6 @@
     position: relative;
     width: 100%;
     height: 15rem;
-
     @include page-width(0 1rem);
     @include tablet {
       @include page-width(0 2.25rem);
@@ -90,6 +89,7 @@
       @include tablet {
         padding-top: 1rem;
         @include body-text(0.875rem, 600, 1.375rem);
+        color: $prm-black;
       }
     }
   }
@@ -120,6 +120,8 @@
     }
     .band-text {
       @include body-text(0.8125rem, 400, 1.125rem);
+      color: $prm-black;
+
       @include tablet {
         @include body-text(0.875rem, 400, 1.375rem);
         flex: 1;
@@ -152,12 +154,86 @@
     .gallery__heading {
       @include section-heading(1.5rem, 700, 2rem, $prm-black);
       flex: 0 0 100%;
+      @include tablet {
+        @include section-heading(2.25rem, 700, 2.75rem, $prm-black);
+      }
     }
     .gallery__img {
       width: 100%;
       @include tablet {
         flex: 1;
         width: 30%;
+      }
+    }
+  }
+}
+// form & comment section
+.comment {
+  @include page-width(0 1rem);
+  padding: 1.5rem 0 1rem 0;
+  @include tablet {
+    @include page-width(0 2.25rem);
+    padding: 3rem 0 2.25rem 0;
+  }
+  @include desktop {
+    @include page-width(0 auto);
+    width: 80rem;
+  }
+  &__heading {
+    @include section-heading(1.5rem, 700, 2rem, $prm-black);
+    @include tablet {
+      @include section-heading(2.25rem, 700, 2.75rem, $prm-black);
+    }
+  }
+  &-section {
+    width: 100%;
+    @include tablet {
+      width: 60%;
+      margin: 0 auto;
+    }
+    @include desktop {
+      width: 50%;
+      margin: 0 auto;
+    }
+    &__form {
+      .comment-details--image {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: left;
+        @include tablet {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+        }
+      }
+      &-sec {
+        &-label {
+          display: block;
+        }
+        &-input {
+        }
+        &-input-big {
+        }
+      }
+      .button {
+        height: 2.5rem;
+        width: 100%;
+        background-color: $prm-black;
+        color: $prm-white;
+        border-radius: 4px;
+        text-transform: uppercase;
+        @include cta-text(0.875rem, 600, 1.375rem);
+
+        &:hover {
+          background-color: $sec-black;
+          color: $prm-white;
+        }
+        @include tablet {
+          padding: 0 2rem;
+          width: auto;
+        }
       }
     }
   }

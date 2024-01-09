@@ -453,7 +453,6 @@ body {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.375rem;
-    color: #323232;
     flex: 1;
   }
 }
@@ -492,6 +491,14 @@ body {
   color: #323232;
   flex: 0 0 100%;
 }
+@media screen and (min-width: 48rem) {
+  .gallery__wrapper .gallery__heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    color: #323232;
+  }
+}
 .gallery__wrapper .gallery__img {
   width: 100%;
 }
@@ -499,5 +506,91 @@ body {
   .gallery__wrapper .gallery__img {
     flex: 1;
     width: 30%;
+  }
+}
+
+.comment {
+  margin: 0 1rem;
+  padding: 1.5rem 0 1rem 0;
+}
+@media screen and (min-width: 48rem) {
+  .comment {
+    margin: 0 2.25rem;
+    padding: 3rem 0 2.25rem 0;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .comment {
+    margin: 0 auto;
+    width: 80rem;
+  }
+}
+.comment__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #323232;
+}
+@media screen and (min-width: 48rem) {
+  .comment__heading {
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 2.75rem;
+    color: #323232;
+  }
+}
+.comment-section {
+  width: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .comment-section {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .comment-section {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+.comment-section__form .comment-details--image {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
+}
+@media screen and (min-width: 48rem) {
+  .comment-section__form .comment-details--image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+  }
+}
+.comment-section__form-sec-label {
+  display: block;
+}
+.comment-section__form .button {
+  height: 2.5rem;
+  width: 100%;
+  background-color: #323232;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+.comment-section__form .button:hover {
+  background-color: #000;
+  color: #fff;
+}
+@media screen and (min-width: 48rem) {
+  .comment-section__form .button {
+    padding: 0 2rem;
+    width: auto;
   }
 }/*# sourceMappingURL=bio.css.map */

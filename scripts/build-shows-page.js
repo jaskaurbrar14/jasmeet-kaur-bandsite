@@ -48,7 +48,7 @@ function CreateShow(i) {
   const showDateInput = document.createElement("h3");
   showDateInput.classList.add("show-details--date-input");
   showDate.appendChild(showDateInput);
-  showDateInput.innerText = "Shows[i].date";
+  showDateInput.innerText = new Date(Shows[i].date).toLocaleDateString("en-US");
   // venue
   const showVenue = document.createElement("section");
   showVenue.classList.add("show-details--venue");
@@ -60,9 +60,9 @@ function CreateShow(i) {
   showVenueLabel.innerText = "Venue";
 
   const showVenueInput = document.createElement("p");
-  showDateInput.classList.add("show-details--venue-input");
+  showVenueInput.classList.add("show-details--venue-input");
   showVenue.appendChild(showVenueInput);
-  showVenueInput.innerText = "Shows[show].venue";
+  showVenueInput.innerText = Shows[i].venue;
 
   // location
   const showLocation = document.createElement("section");
@@ -72,12 +72,12 @@ function CreateShow(i) {
   const showLocationLabel = document.createElement("p");
   showLocationLabel.classList.add("show-details--location-label");
   showLocation.appendChild(showLocationLabel);
-  showLocationLabel.innerText = "Shows[i].location";
+  showLocationLabel.innerText = "Location";
 
   const showLocationInput = document.createElement("p");
   showLocationInput.classList.add("show-details--location-input");
   showLocation.appendChild(showLocationInput);
-  showLocationInput.innerText = "Shows[i].location";
+  showLocationInput.innerText = Shows[i].location;
 
   const showButton = document.createElement("Button");
   showButton.classList.add("show-details--button");
@@ -91,3 +91,9 @@ function CreateShow(i) {
 for (let i = 0; i < Shows.length; i++) {
   CreateShow(i);
 }
+
+const showCont = document.querySelector(".show");
+showCont.addEventListener("click", (event) => {
+  const newShowEl = event.target;
+  newShowEl.classList.add("show-details--highlight");
+});

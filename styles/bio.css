@@ -381,15 +381,14 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.375rem;
-  color: #323232;
   padding-top: 1rem;
+  color: #323232;
 }
 @media screen and (min-width: 48rem) {
   .musicians-bio .musicians-quote {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 2rem;
-    color: #323232;
     padding-top: 2.25rem;
     width: 86%;
     margin: 0 auto;
@@ -432,15 +431,14 @@ body {
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.375rem;
-  color: #323232;
   text-transform: capitalize;
+  color: #323232;
 }
 @media screen and (min-width: 48rem) {
   .musicians-bio .band-bio .band-heading {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 2rem;
-    color: #323232;
     flex: 0 0 100%;
   }
 }

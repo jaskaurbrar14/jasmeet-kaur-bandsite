@@ -75,6 +75,8 @@
   .musicians-quote {
     @include sub-section-heading(0.875rem, 600, 1.375rem);
     padding-top: 1rem;
+    color: $prm-black;
+
     @include tablet {
       @include sub-section-heading(1.5rem, 600, 2rem);
       padding-top: 2.25rem;
@@ -83,6 +85,8 @@
     }
     .musician-name {
       @include sub-section-heading(0.875rem, 600, 1.375rem);
+      color: $prm-black;
+
       @include tablet {
         padding-top: 1rem;
         @include body-text(0.875rem, 600, 1.375rem);
@@ -107,6 +111,8 @@
     .band-heading {
       @include sub-section-heading(0.875rem, 600, 1.375rem);
       text-transform: capitalize;
+      color: $prm-black;
+
       @include tablet {
         @include sub-section-heading(1.5rem, 600, 2rem);
         flex: 0 0 100%;

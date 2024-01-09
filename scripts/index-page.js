@@ -19,8 +19,6 @@ const Comments = [
   },
 ];
 
-CreateComment();
-
 function CreateComment() {
   const commentCont = document.querySelector(".comments");
   commentCont.innerHTML = "";
@@ -51,7 +49,7 @@ function CreateComment() {
     const commentText = document.createElement("p");
     commentText.classList.add("comment-details--sec-text");
     commentContainer.appendChild(commentText);
-    commentText.innerText = "comment.siteComment";
+    commentText.innerText = comment.siteComment;
 
     const Divider = document.createElement("hr");
     Divider.classList.add("comments__divider");
@@ -59,6 +57,7 @@ function CreateComment() {
   });
 }
 CreateComment();
+
 const Form = document.querySelector(".comment-section__form");
 
 Form.addEventListener("submit", (event) => {

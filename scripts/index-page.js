@@ -24,30 +24,30 @@ function CreateComment() {
   commentCont.innerHTML = "";
   Comments.forEach((comment) => {
     const commentEl = document.createElement("article");
-    commentEl.classList.add("comment-details");
+    commentEl.classList.add("comments-details");
     commentCont.appendChild(commentEl);
 
     const commentImage = document.createElement("img");
-    commentImage.classList.add("comment-details--image");
-    commentImage.setAttribute("src", "");
+    commentImage.classList.add("comments-details--image");
+    commentImage.setAttribute("src", " ");
     commentEl.appendChild(commentImage);
 
     const commentContainer = document.createElement("section");
-    commentContainer.classList.add("comment-details--sec");
+    commentContainer.classList.add("comments-details--sec");
     commentEl.appendChild(commentContainer);
 
     const commentName = document.createElement("p");
-    commentName.classList.add("comment-details--sec-name");
+    commentName.classList.add("comments-details--sec-name");
     commentContainer.appendChild(commentName);
     commentName.innerText = comment.name;
 
     const commentDate = document.createElement("p");
-    commentDate.classList.add("comment-details--sec-date");
+    commentDate.classList.add("comments-details--sec-date");
     commentContainer.appendChild(commentDate);
     commentDate.innerText = new Date(comment.date).toLocaleDateString("en-US");
 
     const commentText = document.createElement("p");
-    commentText.classList.add("comment-details--sec-text");
+    commentText.classList.add("comments-details--sec-text");
     commentContainer.appendChild(commentText);
     commentText.innerText = comment.siteComment;
 

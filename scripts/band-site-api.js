@@ -21,7 +21,7 @@ export default class BandSiteApi {
         `${this.baseUrl}comments?api_key=${this.apiKey}`
       );
       const comments = response.data;
-      // comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+      comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
 
       function createComment() {
         const commentCont = document.querySelector(".comments");

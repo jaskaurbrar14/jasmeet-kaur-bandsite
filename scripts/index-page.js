@@ -8,24 +8,16 @@ BandSite.getComment();
 const Form = document.querySelector(".comment-section__form");
 Form.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const newName = event.target.name - input;
-  const newComment = event.target.comment - input;
+
+  const newName = event.target.name.value;
+  const newComment = event.target.comment.value;
 
   const comment = {
-    name: newName.name,
-    comment: newComment.comment,
-    timestamp: new Date(),
+    name: newName,
+    comment: newComment,
   };
+  console.log(comment);
   await BandSite.postComment(comment);
   Form.reset();
-  // comments.unshift(comment);
   await BandSite.getComment();
 });
-
-// comments.unshift({
-//   name: newName.value,
-//   date: Date.now(),
-//   comment: newComment.value,
-// });
-// event.target.reset();
-// createComment();

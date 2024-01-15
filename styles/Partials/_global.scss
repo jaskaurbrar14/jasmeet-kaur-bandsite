@@ -1,13 +1,13 @@
 // Global resets Section
-@use "typography" as *;
-@use "variables" as *;
-@use "mixins" as *;
+@use "./typography" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 // resets
 * {
   @include reset;
 }
 body {
-  font-family: "Avenir Next Lt Pro", Sans-serif;
+  font-family: "Avenir Next", Sans-serif;
 }
 // Header Section
 .header {
@@ -26,6 +26,7 @@ body {
       gap: 4.25rem;
       justify-content: flex-start;
       padding-top: 0;
+      width: 48rem;
     }
     @include desktop {
       @include page-width(0 auto);
@@ -52,6 +53,7 @@ body {
         flex-direction: row;
         @include tablet {
           gap: 4rem;
+          width: max-content;
         }
 
         li {
@@ -78,6 +80,7 @@ body {
               @extend :active;
             }
             &--active {
+              @include header(1rem, 400, $prm-white);
               border-bottom: $prm-white solid 4px;
             }
           }
@@ -145,11 +148,13 @@ body {
           display: block;
           margin-left: auto;
         }
+
         .band-logo {
           width: 7.5rem;
         }
       }
     }
+
     .contact-wrapper {
       width: 100%;
       display: flex;
@@ -179,17 +184,17 @@ body {
         }
 
         &__address {
-          @include footer-text(0.8125rem, 400, 1.125rem, $sec-mercury);
+          @include footer-text(0.8125rem, 400, 1.125rem, $prm-white);
           @include tablet {
-            @include footer-text(0.875rem, 400, 1.25rem, $sec-mercury);
+            @include footer-text(0.875rem, 400, 1.25rem, $prm-white);
           }
         }
 
         &__email a {
-          @include footer-text(0.8125rem, 400, 1.125rem, $sec-mercury);
+          @include footer-text(0.8125rem, 400, 1.125rem, $prm-white);
           text-decoration: none;
           @include tablet {
-            @include footer-text(0.875rem, 400, 1.25rem, $sec-mercury);
+            @include footer-text(0.875rem, 400, 1.25rem, $prm-white);
           }
         }
       }

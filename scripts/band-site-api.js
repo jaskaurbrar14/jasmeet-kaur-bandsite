@@ -1,4 +1,4 @@
-export default class BandSiteApi {
+export default class bandSiteApi {
   constructor(apiKey) {
     this.apiKey = apiKey;
     this.baseUrl = "https://project-1-api.herokuapp.com/";
@@ -80,7 +80,6 @@ export default class BandSiteApi {
         `${this.baseUrl}showdates?api_key=${this.apiKey}`
       );
       const showdates = response.data;
-      console.log(showdates);
 
       function createShow() {
         const showCont = document.querySelector(".show-wrapper");
@@ -105,6 +104,7 @@ export default class BandSiteApi {
             month: "short",
             day: "2-digit",
           };
+
           const showDateInput = document.createElement("h3");
           showDateInput.classList.add("show-details__date-input");
           showDate.appendChild(showDateInput);

@@ -1,13 +1,13 @@
 // Global resets Section
-@use "typography" as *;
-@use "variables" as *;
-@use "mixins" as *;
+@use "./typography" as *;
+@use "./variables" as *;
+@use "./mixins" as *;
 // resets
 * {
   @include reset;
 }
 body {
-  font-family: "Avenir Next Lt Pro", Sans-serif;
+  font-family: "Avenir Next", Sans-serif;
 }
 // Header Section
 .header {

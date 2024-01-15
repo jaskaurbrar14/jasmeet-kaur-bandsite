@@ -6,7 +6,10 @@ export default class BandSiteApi {
 
   async postComment(comment) {
     try {
-      await axios.post(`${this.baseUrl}?api_key=${this.apiKey}`, comment);
+      await axios.post(
+        `${this.baseUrl}comments?api_key=${this.apiKey}`,
+        comment
+      );
     } catch (error) {
       console.error("Failed to post comment:", error);
     }
@@ -18,9 +21,8 @@ export default class BandSiteApi {
         `${this.baseUrl}comments?api_key=${this.apiKey}`
       );
       const comments = response.data;
-      // comments.sort(
-      //   (objA, objB) => new Date(objB.timestamp) - new Date(objA.timestamp)
-      // );
+      // comments.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
       function createComment() {
         const commentCont = document.querySelector(".comments");
         commentCont.innerHTML = "";
@@ -78,76 +80,78 @@ export default class BandSiteApi {
         `${this.baseUrl}showdates?api_key=${this.apiKey}`
       );
       const showdates = response.data;
+      console.log(showdates);
 
-      function CreateShow(i) {
+      function createShow() {
         const showCont = document.querySelector(".show-wrapper");
-        const showEl = document.createElement("article");
-        showEl.classList.add("show-details");
-        showCont.appendChild(showEl);
+        showCont.innerHTML = "";
+        showdates.forEach((showdate) => {
+          const showEl = document.createElement("article");
+          showEl.classList.add("show-details");
+          showCont.appendChild(showEl);
 
-        const showDate = document.createElement("section");
-        showDate.classList.add("show-details__date");
-        showEl.appendChild(showDate);
+          const showDate = document.createElement("section");
+          showDate.classList.add("show-details__date");
+          showEl.appendChild(showDate);
 
-        const showDateLabel = document.createElement("p");
-        showDateLabel.classList.add("show-details__date-label");
-        showDate.appendChild(showDateLabel);
-        showDateLabel.innerText = "Date";
+          const showDateLabel = document.createElement("p");
+          showDateLabel.classList.add("show-details__date-label");
+          showDate.appendChild(showDateLabel);
+          showDateLabel.innerText = "Date";
 
-        const dateFormat = {
-          weekday: "short",
-          year: "numeric",
-          month: "short",
-          day: "2-digit",
-        };
-        const showDateInput = document.createElement("h3");
-        showDateInput.classList.add("show-details__date-input");
-        showDate.appendChild(showDateInput);
-        showDateInput.innerText = new Date(
-          showdates[i].date
-        ).toLocaleDateString("en-US", dateFormat);
+          const dateFormat = {
+            weekday: "short",
+            year: "numeric",
+            month: "short",
+            day: "2-digit",
+          };
+          const showDateInput = document.createElement("h3");
+          showDateInput.classList.add("show-details__date-input");
+          showDate.appendChild(showDateInput);
+          showDateInput.innerText = new Date(showdate.date).toLocaleDateString(
+            "en-US",
+            dateFormat
+          );
 
-        const showVenue = document.createElement("section");
-        showVenue.classList.add("show-details__venue");
-        showEl.appendChild(showVenue);
+          const showVenue = document.createElement("section");
+          showVenue.classList.add("show-details__venue");
+          showEl.appendChild(showVenue);
 
-        const showVenueLabel = document.createElement("p");
-        showVenueLabel.classList.add("show-details__venue-label");
-        showVenue.appendChild(showVenueLabel);
-        showVenueLabel.innerText = "Venue";
+          const showVenueLabel = document.createElement("p");
+          showVenueLabel.classList.add("show-details__venue-label");
+          showVenue.appendChild(showVenueLabel);
+          showVenueLabel.innerText = "Venue";
 
-        const showVenueInput = document.createElement("p");
-        showVenueInput.classList.add("show-details__venue-input");
-        showVenue.appendChild(showVenueInput);
-        showVenueInput.innerText = showdates[i].place;
+          const showVenueInput = document.createElement("p");
+          showVenueInput.classList.add("show-details__venue-input");
+          showVenue.appendChild(showVenueInput);
+          showVenueInput.innerText = showdate.place;
 
-        const showLocation = document.createElement("section");
-        showLocation.classList.add("show-details__location");
-        showEl.appendChild(showLocation);
+          const showLocation = document.createElement("section");
+          showLocation.classList.add("show-details__location");
+          showEl.appendChild(showLocation);
 
-        const showLocationLabel = document.createElement("p");
-        showLocationLabel.classList.add("show-details__location-label");
-        showLocation.appendChild(showLocationLabel);
-        showLocationLabel.innerText = "Location";
+          const showLocationLabel = document.createElement("p");
+          showLocationLabel.classList.add("show-details__location-label");
+          showLocation.appendChild(showLocationLabel);
+          showLocationLabel.innerText = "Location";
 
-        const showLocationInput = document.createElement("p");
-        showLocationInput.classList.add("show-details__location-input");
-        showLocation.appendChild(showLocationInput);
-        showLocationInput.innerText = showdates[i].location;
+          const showLocationInput = document.createElement("p");
+          showLocationInput.classList.add("show-details__location-input");
+          showLocation.appendChild(showLocationInput);
+          showLocationInput.innerText = showdate.location;
 
-        const showButton = document.createElement("Button");
-        showButton.classList.add("show-details__button");
-        showEl.appendChild(showButton);
-        showButton.innerText = "Buy Tickets";
+          const showButton = document.createElement("Button");
+          showButton.classList.add("show-details__button");
+          showEl.appendChild(showButton);
+          showButton.innerText = "Buy Tickets";
 
-        const Divider = document.createElement("hr");
-        Divider.classList.add("show__divider");
-        showCont.appendChild(Divider);
+          const Divider = document.createElement("hr");
+          Divider.classList.add("show__divider");
+          showCont.appendChild(Divider);
+        });
       }
-
-      for (let i = 0; i < showsdates.length; i++) {
-        CreateShow(i);
-      }
+      createShow();
     } catch (error) {
       console.error("Failed to get showdates:", error);
     }
